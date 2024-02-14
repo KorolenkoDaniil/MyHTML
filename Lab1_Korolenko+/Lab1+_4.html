@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="D:\html\Lab1_Korolenko+\Lab1+_4.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Creating a chart</h2>
+
+    <p style="margin-top: 5px;">
+        <span style="color: rgb(171, 171, 171);"> 
+        To create a chart, we need to instantiate the Chart class. To do this, we need<br>
+        to pass in the 2d context of where we want to draw the chart. Here's an<br> 
+        example.
+        </span>
+    </p>
+    <p class="greyParagraph">
+        <span style="color: blue">&ltcanvas</span>
+        <span style="color: #548aff">id=</span>
+        <span style="color: red">"myChart"</span>
+        <span style="color: #548aff">width=</span>
+        <span style="color: red">"400"</span>
+        <span style="color: #548aff">height=</span>
+        <span style="color: red">"400"</span>
+        <span style="color: blue">>&lt/canvas></span>
+    </p>
+    
+    
+    <p class="greyParagraph">     
+        <span style="color: #3f8c7a">// Get the context of the canvas element we want to select<br></span>
+            <b>var</b>
+            ctx = 
+        <span style="color: #548aff">document.</span>
+            getElementById(
+        <span style="color: red">"myChart"</span>
+            ).getContext(
+        <span style="color: red">"2d");<br></span>
+            <b>var</b>
+            myNewChart = 
+            <b>new</b>
+            Chart(ctx). PolarArea (data);
+    </p>
+    <p>
+        We can also get the context of our canvas with jQuery To do this, we need to<br>
+        get the DOM node out of the jQuery collection, and call the<br>
+        getContext("2d") method on that
+    </p>
+    <p class="greyParagraph">
+        <span style="color: #4aa590">// Get context with jQuery using jQuery's.get() method.<br></span>
+        <b>var</b>
+        ctx = $(
+        <span style="color: red">"#myChart"</span>
+        ).get(
+        <span style="color: #548aff">0</span>
+            ).getContext(
+        <span style="color: red">"2d"<br></span>
+            );"
+        <span style="color: #3f8c7a">// This will get the first returned node in the jQuery collection<br></span>
+        <b>var</b>
+        myllewChart = 
+        <b>new</b>
+        Chart(ctx);<br>
+    </p>
+
+
+</body>
+</html>
